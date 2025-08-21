@@ -21,7 +21,10 @@ app.use(fileUpload({
 }));
 app.use(cookieParser());
 app.use(cors({
-  origin:"http://localhost:5173",//mana backend ki kevalam idhi oka frontend ee access chesthadi
+  origin: [
+      "http://localhost:5173", // for local dev
+      "https://courseheaven-front.onrender.com", // ✅ your deployed frontend
+    ],//mana backend ki kevalam idhi oka frontend ee access chesthadi
   credentials:true,//it handels cookies and erorrs like (CORS)
   methods:["GET","POST","PUT","DELETE"],
   allowedHeaders:["Content-Type","Authorization"],
