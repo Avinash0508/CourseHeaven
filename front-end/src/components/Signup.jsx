@@ -30,7 +30,7 @@ function Signup() {
       })
       console.log("Signup Succesfull : ",response.data)
       toast.success(response.data.message)
-      navigate('login')
+      navigate('/login')
     } catch (error) {
       if(error.response){      
         setErrorMessage(error.response.data.errors || "signup failed!!");
